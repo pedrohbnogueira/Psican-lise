@@ -1,8 +1,7 @@
 /* ==========================================================================
-   PALETApadrao: TERRACOTA E VERDE SÁLVIA (Orgânica e Acolhedora)
+   PALETA PADRÃO: TERRACOTA E VERDE SÁLVIA (Orgânica e Acolhedora)
    LAYOUT: Otimizado para visualização completa sem rolagem (Single Screen)
-   PROPORÇÕES: Currículo (0.90rem em Lora) | Apresentação (1.45rem em Cormorant Regular)
-   MODIFICAÇÃO: Nova Seção Dedicada de Contato em formato de Card Institucional
+   PROPORÇÕES: Textos unificados na fonte Lora para teste estético
    ========================================================================== */
 
 * {
@@ -102,15 +101,15 @@ body, html {
 
 /* Seção de Apresentação */
 .secao-biografia {
-    margin-bottom: 25px; /* Reduzido o espaço para aproximar a nova seção */
+    margin-bottom: 25px; 
     width: 100%;
 }
 
-/* Cormorant Garamond */
+/* Alterado para Lora para o teste de unificação */
 .texto-narrativa-corpo {
-    font-family: 'Cormorant Garamond', serif; 
-    font-size: 1.45rem;         
-    line-height: 1.4;           
+    font-family: 'Lora', serif; 
+    font-size: 1.15rem;         
+    line-height: 1.6;           
     color: #1E201C;                 
     width: 100%; 
     margin-bottom: 0px; 
@@ -119,14 +118,14 @@ body, html {
     font-weight: normal; 
 }
 
-/* Nova Estrutura: Seção de Contato Dedicada (Formato Card) */
+/* Seção de Contato Dedicada */
 .secao-contato {
     width: 100%;
     margin-bottom: 50px;
 }
 
 .card-contato {
-    background-color: #EAECE6; /* Fundo sutil para destacar a área de atendimento */
+    background-color: #EAECE6; 
     border: 1px solid #D6DAD0;
     border-radius: 12px;
     padding: 25px 30px;
@@ -145,8 +144,10 @@ body, html {
     font-weight: 600;
 }
 
+/* Linhas de informações alteradas para Lora */
 .info-linha {
-    font-size: 0.9rem;
+    font-family: 'Lora', serif;
+    font-size: 0.95rem;
     color: #2B2D27;
     line-height: 1.5;
     margin-bottom: 4px;
@@ -154,6 +155,18 @@ body, html {
 
 .info-linha:last-child {
     margin-bottom: 0;
+}
+
+/* Estilização sutil para o link do Google Maps */
+.link-mapa {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link-mapa:hover {
+    color: #9C5A40; /* Destaca em terracota ao passar o mouse */
+    text-decoration: underline; /* Adiciona o sublinhado elegante no hover */
 }
 
 /* Botão de Destaque */
@@ -169,7 +182,7 @@ body, html {
     border-radius: 8px;           
     transition: all 0.3s ease;
     cursor: pointer;
-    white-space: nowrap; /* Impede o botão de quebrar em duas linhas */
+    white-space: nowrap; 
 }
 
 .btn-destaque {
@@ -224,9 +237,11 @@ body, html {
     color: #A3AFA0;
 }
 
+/* Títulos dos itens inferiores alterados para Lora */
 .titulo-item {
-    font-size: 0.95rem; 
-    line-height: 1.4;
+    font-family: 'Lora', serif;
+    font-size: 1.0rem; 
+    line-height: 1.5;
     color: #2B2D27;
     transition: color 0.2s ease;
     text-align: justify;
@@ -274,9 +289,8 @@ body, html {
     }
     .wrapper { padding: 20px 20px; }
     .secao-biografia { margin-bottom: 25px; }
-    .texto-narrativa-corpo { font-size: 1.25rem; }
+    .texto-narrativa-corpo { font-size: 1.1rem; }
     
-    /* Adaptação do Card de Contato para Celular */
     .card-contato {
         flex-direction: column;
         text-align: center;
