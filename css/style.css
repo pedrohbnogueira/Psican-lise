@@ -141,7 +141,7 @@ body {
   margin-bottom: 6px;
 }
 
-/* TIPOGRAFIA DO CURRÍCULO (AUMENTADA EM 5% CONFORME SOLICITADO) */
+/* TIPOGRAFIA DO CURRÍCULO */
 .about-body {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(0.94rem, 1.08vw, 1.10rem); 
