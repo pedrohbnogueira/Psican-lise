@@ -18,10 +18,10 @@
 }
 
 html, body {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  overflow: hidden;
   background: var(--warm-white);
+  overflow-x: hidden;
 }
 
 body {
@@ -37,7 +37,8 @@ body {
 .screen-container {
   display: grid;
   grid-template-columns: 30vw 70vw;
-  height: 92vh; 
+  min-height: 92vh; 
+  height: 92vh;
   width: 100vw;
 }
 
@@ -69,22 +70,23 @@ body {
 .main-content-col {
   display: flex;
   flex-direction: column;
+  justify-content: space-between; 
   height: 100%;
+  overflow-y: auto; 
 }
 
-/* Parte Superior: Hero + Biografia + Card */
+/* Parte Superior: Hero + Biografia */
 .top-hero-area {
-  height: 65.4%; 
-  padding: 20px 60px 10px 45px;
+  padding: 30px 60px 10px 45px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 /* FRASE DE EFEITO CENTRALIZADA */
 .hero-headline-container {
   text-align: center;
   width: 100%;
-  margin-bottom: auto;
 }
 
 .hero-label {
@@ -113,7 +115,6 @@ body {
 /* BIOGRAFIA */
 .about-bio-container {
   text-align: left;
-  margin-bottom: auto;
 }
 
 .section-eyebrow {
@@ -140,24 +141,32 @@ body {
   margin-bottom: 6px;
 }
 
-/* TIPOGRAFIA DO CURRÍCULO */
+/* TIPOGRAFIA DO CURRÍCULO (AUMENTADA EM 5% CONFORME SOLICITADO) */
 .about-body {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(0.89rem, 1.03vw, 1.05rem); 
+  font-size: clamp(0.94rem, 1.08vw, 1.10rem); 
   color: var(--text);
   line-height: 1.5;
   text-align: justify;
 }
 
-/* CARD CLÍNICO CENTRALIZADO VERTICALMENTE */
+/* AREA CENTRAL DO CARD */
+.middle-card-area {
+  padding: 10px 60px 10px 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* CARD CLÍNICO */
 .inline-contact-card {
   background: var(--cream);
   border: 1px solid var(--sand);
-  padding: 12px 20px;
+  padding: 14px 20px;
   border-radius: 2px;
   max-width: 520px;
   width: 100%;
-  margin: auto auto 10px auto;
 }
 
 .card-label {
@@ -213,18 +222,16 @@ body {
 .btn-whatsapp-inline:hover { background: var(--accent-hover); }
 .btn-whatsapp-inline svg { width: 12px; height: 12px; fill: #fff; flex-shrink: 0; }
 
-/* SEÇÃO INFERIOR CONTEÚDO (CONJUNTO ARRASTADO PARA A DIREITA) */
+/* SEÇÃO INFERIOR CONTEÚDO */
 .content-section {
-  height: 26.6%; 
-  padding: 0 60px 20px 10%; /* Ajuste no padding-left para empurrar o bloco estrutural à direita */
+  padding: 10px 60px 30px 10%; 
   background: var(--warm-white);
-  border-top: none; 
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Garante que o container flex se alinhe à direita do painel */
+  justify-content: flex-end; 
 }
 
-/* ESTRUTURA DISTRIBUÍDA E ALARGADA ORIGINAL */
+/* ESTRUTURA DISTRIBUÍDA E ALARGADA */
 .content-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -232,7 +239,7 @@ body {
   width: 100%; 
 }
 
-/* DISPOSIÇÃO TEXTUAL INTERNA MANTIDA À ESQUERDA SENSIVELMENTE */
+/* DISPOSIÇÃO TEXTUAL INTERNA MANTIDA À ESQUERDA */
 .content-box {
   display: flex;
   flex-direction: column;
@@ -342,6 +349,7 @@ body {
   display: flex;
   align-items: center;
   z-index: 10;
+  margin-top: auto;
 }
 
 .footer-grid {
@@ -434,19 +442,22 @@ body {
     background: linear-gradient(to bottom, transparent 75%, var(--warm-white) 100%);
   }
 
-  .main-content-col, .top-hero-area, .content-section, .unified-footer {
+  .main-content-col, .top-hero-area, .middle-card-area, .content-section, .unified-footer {
     height: auto;
   }
 
   .top-hero-area {
-    padding: 35px 24px 20px 24px;
-    gap: 30px;
+    padding: 35px 24px 10px 24px;
+    gap: 25px;
+  }
+
+  .middle-card-area {
+    padding: 15px 24px;
   }
 
   .inline-contact-card {
     max-width: 100%;
     padding: 16px;
-    margin: 10px 0;
   }
 
   .card-grid {
