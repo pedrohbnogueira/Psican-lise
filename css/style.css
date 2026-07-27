@@ -80,7 +80,7 @@ body {
   padding: 28px 60px 10px 45px;
   display: flex;
   flex-direction: column;
-  gap: 28px; /* Espaçamento ajustado entre Bloco Hero e Biografia */
+  gap: 28px;
 }
 
 /* FRASE DE EFEITO CENTRALIZADA */
@@ -89,17 +89,15 @@ body {
   width: 100%;
 }
 
-/* PALABRA PSICANALISE (+10% e maior margem inferior) */
 .hero-label {
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 12px; /* Espaço maior fornecido abaixo da palavra PSICANALISE */
+  margin-bottom: 12px;
 }
 
-/* TEXTO HERO "Permitir-se falar..." (+10%) */
 .hero-headline {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.60rem, 2.36vw, 2.15rem);
@@ -112,6 +110,21 @@ body {
   font-style: italic;
   font-weight: 400;
   color: #4a3e18;
+}
+
+/* INTRODUÇÃO */
+.intro-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.intro-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.19rem, 1.38vw, 1.40rem);
+  color: var(--text);
+  line-height: 1.5;
+  text-align: justify;
 }
 
 /* BIOGRAFIA */
@@ -224,7 +237,7 @@ body {
 .btn-whatsapp-inline:hover { background: var(--accent-hover); }
 .btn-whatsapp-inline svg { width: 12px; height: 12px; fill: #fff; flex-shrink: 0; }
 
-/* SEÇÃO INFERIOR CONTEÚDO */
+/* SEÇÃO INFERIOR CONTEÚDO (PRODUÇÕES & EVENTOS) */
 .content-section {
   padding: 12px 60px 24px 10%; 
   background: var(--warm-white);
@@ -241,7 +254,6 @@ body {
   width: 100%; 
 }
 
-/* DISPOSIÇÃO TEXTUAL INTERNA MANTIDA À ESQUERDA */
 .content-box {
   display: flex;
   flex-direction: column;
@@ -250,7 +262,7 @@ body {
 }
 
 .content-section-title {
-  font-size: 0.6rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -265,20 +277,20 @@ body {
 }
 
 .article-tag {
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--accent);
+  margin-bottom: 2px;
 }
 
 .article-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+  font-size: clamp(1.03rem, 1.19vw, 1.21rem);
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.4;
   color: var(--dark-brown);
-  margin-bottom: 2px;
 }
 
 .events-timeline {
@@ -295,18 +307,19 @@ body {
 }
 
 .event-date {
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--accent);
+  margin-bottom: 2px;
 }
 
 .event-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+  font-size: clamp(1.03rem, 1.19vw, 1.21rem);
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.4;
   color: var(--dark-brown);
 }
 
@@ -339,8 +352,9 @@ body {
 }
 
 .event-place {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   color: var(--muted);
+  margin-top: 2px;
 }
 
 /* ── RODAPÉ UNIFICADO FIXO ── */
@@ -477,7 +491,7 @@ body {
   }
 
   .article-title, .event-title {
-    font-size: 1.1rem !important;
+    font-size: 1.15rem !important;
   }
 
   .unified-footer {
