@@ -74,22 +74,22 @@ body {
   overflow-y: auto; 
 }
 
-/* Parte Superior: Título, Apresentação, Frase e Resumo Curricular */
+/* PARTE SUPERIOR */
 .top-hero-area {
-  padding: 16px 50px 0px 40px;
+  padding: 16px 40px 0px 40px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px; /* Espaçamento interno reduzido para aproximar os elementos */
 }
 
-/* TÍTULO PRINCIPAL NO MESMO TAMANHO DA FRASE DE EFEITO */
+/* TÍTULO PRINCIPAL - AUMENTADO PARA ACOMPANHAR WIDESCREEN */
 .main-header-title-container {
   text-align: left;
 }
 
 .main-header-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.35rem, 1.80vw, 1.70rem);
+  font-size: clamp(1.50rem, 2.10vw, 2.10rem); /* Tamanho aumentado e pareado com a Frase de Efeito */
   font-weight: 500;
   color: var(--dark-brown);
   margin-bottom: 2px;
@@ -106,27 +106,27 @@ body {
 .intro-text-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .intro-body {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.10rem, 1.28vw, 1.30rem);
   color: var(--text);
-  line-height: 1.40;
+  line-height: 1.38;
   text-align: justify;
 }
 
-/* FRASE DE EFEITO CENTRALIZADA (COM MAIOR RESPIRO) */
+/* FRASE DE EFEITO CENTRALIZADA - MESMO TAMANHO DO TÍTULO PRINCIPAL */
 .hero-headline-container {
   text-align: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 16px 0; /* Destaque central mantido */
 }
 
 .hero-headline {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.35rem, 1.80vw, 1.70rem);
+  font-size: clamp(1.50rem, 2.10vw, 2.10rem); /* Rigorosamente idêntico ao título principal */
   font-weight: 300;
   line-height: 1.22;
   color: #1e1a0e;
@@ -150,18 +150,17 @@ body {
   margin-bottom: 4px;
 }
 
-/* TIPOGRAFIA DO CURRÍCULO */
 .about-body {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.00rem, 1.12vw, 1.15rem); 
   color: var(--text);
-  line-height: 1.40;
+  line-height: 1.35;
   text-align: justify;
 }
 
-/* ÁREA CENTRAL DO CARD (APROXIMADA DO CURRÍCULO) */
+/* ÁREA CENTRAL DO CARD - APROXIMAÇÃO AO CURRÍCULO E À SEÇÃO INFERIOR */
 .middle-card-area {
-  padding: 2px 50px 4px 40px;
+  padding: 0px 40px; /* Reduzido respiro superior/inferior */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,20 +230,20 @@ body {
 .btn-whatsapp-inline:hover { background: var(--accent-hover); }
 .btn-whatsapp-inline svg { width: 12px; height: 12px; fill: #fff; flex-shrink: 0; }
 
-/* SEÇÃO INFERIOR CONTEÚDO (PRODUÇÕES & EVENTOS) */
+/* SEÇÃO INFERIOR CONTEÚDO (PRODUÇÕES & EVENTOS - DISTRIBUIÇÃO IGUAL E RESPONSIVA) */
 .content-section {
-  padding: 6px 50px 10px 10%; 
+  padding: 2px 40px 10px 40px; /* Reduzido topo para aproximar da caixa de contato */
   background: var(--warm-white);
   display: flex;
   align-items: center;
-  justify-content: flex-end; 
+  justify-content: center; 
+  width: 100%;
 }
 
-/* ESTRUTURA DISTRIBUÍDA E ALARGADA */
 .content-two-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr; /* 50/50 rigoroso */
+  gap: 36px;
   width: 100%; 
 }
 
@@ -253,6 +252,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
+  width: 100%;
 }
 
 .content-section-title {
@@ -261,13 +261,14 @@ body {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .box-inner-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 
 .article-tag {
@@ -281,47 +282,58 @@ body {
 
 .article-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.00rem, 1.12vw, 1.15rem);
+  font-size: clamp(0.98rem, 1.08vw, 1.12rem);
   font-weight: 500;
   line-height: 1.30;
   color: var(--dark-brown);
 }
 
+/* EVENTOS COM QUEBRA DE TEXTO DINÂMICA PADRONIZADA */
 .events-timeline {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  align-items: flex-start;
+  width: 100%;
 }
 
 .event-item {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: wrap; /* Permite quebrar linha dinamicamente quando a tela diminui */
+  gap: 4px 6px;
+  width: 100%;
 }
 
 .event-date {
   font-size: 0.62rem;
   font-weight: 500;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 2px;
+  white-space: nowrap;
+}
+
+.event-dash {
+  font-size: 0.65rem;
+  color: var(--muted);
 }
 
 .event-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.00rem, 1.12vw, 1.15rem);
+  font-size: clamp(0.95rem, 1.02vw, 1.08rem);
   font-weight: 500;
-  line-height: 1.30;
+  line-height: 1.25;
   color: var(--dark-brown);
+  /* Truncamento rígido removido para permitir fluidez dinâmica */
 }
 
+/* LINK DOS EVENTOS */
 .event-link {
   color: var(--dark-brown);
   text-decoration: none;
   font-weight: 500;
-  display: inline-block;
+  display: inline;
   transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
 }
 
@@ -331,6 +343,13 @@ body {
   letter-spacing: 0.01em;
 }
 
+.event-place {
+  font-size: 0.78rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* LINK DO LATTES */
 .lattes-link {
   color: var(--accent);
   text-decoration: none;
@@ -343,12 +362,6 @@ body {
   color: var(--accent-hover);
   font-weight: 600; 
   letter-spacing: 0.01em; 
-}
-
-.event-place {
-  font-size: 0.80rem;
-  color: var(--muted);
-  margin-top: 1px;
 }
 
 /* ── RODAPÉ UNIFICADO FIXO (10vh) ── */
@@ -425,7 +438,7 @@ body {
   color: rgba(255, 255, 255, 0.45);
 }
 
-/* ── OTIMIZAÇÃO AVANÇADA PARA TELAS MENORES / DISPOSITIVOS MÓVEIS ── */
+/* ── OTIMIZAÇÃO PARA DISPOSITIVOS MÓVEIS & TABLETS ── */
 @media (max-width: 992px) {
   html, body {
     height: auto;
@@ -458,11 +471,11 @@ body {
 
   .top-hero-area {
     padding: 35px 24px 10px 24px;
-    gap: 20px;
+    gap: 16px;
   }
 
   .middle-card-area {
-    padding: 15px 24px;
+    padding: 10px 24px;
   }
 
   .inline-contact-card {
@@ -476,12 +489,16 @@ body {
   }
 
   .content-section {
-    padding: 20px 24px 40px 24px;
+    padding: 15px 24px 30px 24px;
   }
 
   .content-two-col {
     grid-template-columns: 1fr;
     gap: 28px;
+  }
+
+  .event-item {
+    gap: 4px;
   }
 
   .article-title, .event-title {
