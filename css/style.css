@@ -76,7 +76,7 @@ body {
 
 /* Parte Superior: Título, Apresentação, Frase e Resumo Curricular */
 .top-hero-area {
-  padding: 16px 50px 4px 40px;
+  padding: 16px 50px 0px 40px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -89,7 +89,7 @@ body {
 
 .main-header-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.35rem, 1.80vw, 1.70rem); /* Padronizado com a frase de efeito */
+  font-size: clamp(1.35rem, 1.80vw, 1.70rem);
   font-weight: 500;
   color: var(--dark-brown);
   margin-bottom: 2px;
@@ -117,11 +117,11 @@ body {
   text-align: justify;
 }
 
-/* FRASE DE EFEITO CENTRALIZADA */
+/* FRASE DE EFEITO CENTRALIZADA (COM MAIOR RESPIRO) */
 .hero-headline-container {
   text-align: center;
   width: 100%;
-  padding: 4px 0;
+  padding: 20px 0;
 }
 
 .hero-headline {
@@ -138,17 +138,9 @@ body {
   color: #4a3e18;
 }
 
-/* RESUMO CURRICULAR (TÍTULO NO MESMO TAMANHO DA APRESENTAÇÃO E NEGRITADO) */
+/* RESUMO CURRICULAR */
 .about-bio-container {
   text-align: left;
-}
-
-.section-heading {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.10rem, 1.28vw, 1.30rem); /* Mesmo tamanho da apresentação */
-  font-weight: 700; /* Negrito mantido */
-  color: var(--dark-brown);
-  margin-bottom: 2px;
 }
 
 .about-divider {
@@ -167,9 +159,9 @@ body {
   text-align: justify;
 }
 
-/* ÁREA CENTRAL DO CARD */
+/* ÁREA CENTRAL DO CARD (APROXIMADA DO CURRÍCULO) */
 .middle-card-area {
-  padding: 4px 50px 4px 40px;
+  padding: 2px 50px 4px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
