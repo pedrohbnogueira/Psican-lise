@@ -37,8 +37,7 @@ body {
 .screen-container {
   display: grid;
   grid-template-columns: 30vw 70vw;
-  min-height: 92vh; 
-  height: 92vh;
+  height: 90vh;
   width: 100vw;
 }
 
@@ -75,34 +74,61 @@ body {
   overflow-y: auto; 
 }
 
-/* Parte Superior: Hero + Biografia (Espaçamento uniforme) */
+/* Parte Superior: Título, Apresentação, Frase e Resumo Curricular */
 .top-hero-area {
-  padding: 28px 60px 10px 45px;
+  padding: 16px 50px 4px 40px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 12px;
+}
+
+/* TÍTULO PRINCIPAL NO MESMO TAMANHO DA FRASE DE EFEITO */
+.main-header-title-container {
+  text-align: left;
+}
+
+.main-header-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.35rem, 1.80vw, 1.70rem); /* Padronizado com a frase de efeito */
+  font-weight: 500;
+  color: var(--dark-brown);
+  margin-bottom: 2px;
+}
+
+.header-divider {
+  width: 32px;
+  height: 1px;
+  background: var(--taupe);
+  margin-bottom: 2px;
+}
+
+/* INTRODUÇÃO (PARÁGRAFOS) */
+.intro-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intro-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.10rem, 1.28vw, 1.30rem);
+  color: var(--text);
+  line-height: 1.40;
+  text-align: justify;
 }
 
 /* FRASE DE EFEITO CENTRALIZADA */
 .hero-headline-container {
   text-align: center;
   width: 100%;
-}
-
-.hero-label {
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 12px;
+  padding: 4px 0;
 }
 
 .hero-headline {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.60rem, 2.36vw, 2.15rem);
+  font-size: clamp(1.35rem, 1.80vw, 1.70rem);
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 1.22;
   color: #1e1a0e;
 }
 
@@ -112,39 +138,15 @@ body {
   color: #4a3e18;
 }
 
-/* INTRODUÇÃO */
-.intro-text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.intro-body {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.19rem, 1.38vw, 1.40rem);
-  color: var(--text);
-  line-height: 1.5;
-  text-align: justify;
-}
-
-/* BIOGRAFIA */
+/* RESUMO CURRICULAR (TÍTULO NO MESMO TAMANHO DA APRESENTAÇÃO E NEGRITADO) */
 .about-bio-container {
   text-align: left;
 }
 
-.section-eyebrow {
-  font-size: 0.6rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 4px;
-}
-
 .section-heading {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.27rem, 1.54vw, 1.48rem);
-  font-weight: 500;
+  font-size: clamp(1.10rem, 1.28vw, 1.30rem); /* Mesmo tamanho da apresentação */
+  font-weight: 700; /* Negrito mantido */
   color: var(--dark-brown);
   margin-bottom: 2px;
 }
@@ -153,21 +155,21 @@ body {
   width: 32px;
   height: 1px;
   background: var(--taupe);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 /* TIPOGRAFIA DO CURRÍCULO */
 .about-body {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.03rem, 1.19vw, 1.21rem); 
+  font-size: clamp(1.00rem, 1.12vw, 1.15rem); 
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.40;
   text-align: justify;
 }
 
 /* ÁREA CENTRAL DO CARD */
 .middle-card-area {
-  padding: 12px 60px 12px 45px;
+  padding: 4px 50px 4px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,7 +180,7 @@ body {
 .inline-contact-card {
   background: var(--cream);
   border: 1px solid var(--sand);
-  padding: 14px 20px;
+  padding: 8px 16px;
   border-radius: 2px;
   max-width: 520px;
   width: 100%;
@@ -190,26 +192,26 @@ body {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .card-info {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 
 .card-item {
   font-family: 'Jost', sans-serif;
-  font-size: 0.85rem;
-  line-height: 1.4;
+  font-size: 0.82rem;
+  line-height: 1.30;
 }
 
 .card-item strong { font-weight: 500; color: var(--dark-brown); }
@@ -228,7 +230,7 @@ body {
   letter-spacing: 0.11em;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 11px 14px;
+  padding: 8px 12px;
   border-radius: 1px;
   width: 100%;
   text-align: center;
@@ -239,7 +241,7 @@ body {
 
 /* SEÇÃO INFERIOR CONTEÚDO (PRODUÇÕES & EVENTOS) */
 .content-section {
-  padding: 12px 60px 24px 10%; 
+  padding: 6px 50px 10px 10%; 
   background: var(--warm-white);
   display: flex;
   align-items: center;
@@ -250,7 +252,7 @@ body {
 .content-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  gap: 40px;
   width: 100%; 
 }
 
@@ -262,12 +264,12 @@ body {
 }
 
 .content-section-title {
-  font-size: 0.72rem;
+  font-size: 0.70rem;
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .box-inner-content {
@@ -277,7 +279,7 @@ body {
 }
 
 .article-tag {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -287,16 +289,16 @@ body {
 
 .article-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.03rem, 1.19vw, 1.21rem);
+  font-size: clamp(1.00rem, 1.12vw, 1.15rem);
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.30;
   color: var(--dark-brown);
 }
 
 .events-timeline {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   align-items: flex-start;
 }
 
@@ -307,7 +309,7 @@ body {
 }
 
 .event-date {
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -317,9 +319,9 @@ body {
 
 .event-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.03rem, 1.19vw, 1.21rem);
+  font-size: clamp(1.00rem, 1.12vw, 1.15rem);
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.30;
   color: var(--dark-brown);
 }
 
@@ -352,16 +354,16 @@ body {
 }
 
 .event-place {
-  font-size: 0.82rem;
+  font-size: 0.80rem;
   color: var(--muted);
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
-/* ── RODAPÉ UNIFICADO FIXO ── */
+/* ── RODAPÉ UNIFICADO FIXO (10vh) ── */
 .unified-footer {
-  height: 8vh; 
+  height: 10vh; 
   background: var(--accent);
-  padding: 8px 40px;
+  padding: 6px 40px;
   display: flex;
   align-items: center;
   z-index: 10;
@@ -373,13 +375,13 @@ body {
   grid-template-columns: 1.3fr 0.7fr;
   width: 100%;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
 }
 
 .footer-disclaimer p {
-  font-size: 12px;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.75);
-  line-height: 1.35;
+  line-height: 1.3;
   text-align: justify;
 }
 
@@ -398,7 +400,7 @@ body {
 .footer-top-row {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 .footer-name {
@@ -431,7 +433,7 @@ body {
   color: rgba(255, 255, 255, 0.45);
 }
 
-/* ── OTIMIZAÇÃO AVANÇADA PARA TELAS MENORES ── */
+/* ── OTIMIZAÇÃO AVANÇADA PARA TELAS MENORES / DISPOSITIVOS MÓVEIS ── */
 @media (max-width: 992px) {
   html, body {
     height: auto;
@@ -464,7 +466,7 @@ body {
 
   .top-hero-area {
     padding: 35px 24px 10px 24px;
-    gap: 25px;
+    gap: 20px;
   }
 
   .middle-card-area {
